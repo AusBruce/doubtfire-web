@@ -1,7 +1,7 @@
 angular.module('doubtfire.tasks.modals.grade-task-modal', [])
 
 #
-# A modal to grade a graded task
+
 #
 .factory('GradeTaskModal', ($modal) ->
   GradeTaskModal = {}
