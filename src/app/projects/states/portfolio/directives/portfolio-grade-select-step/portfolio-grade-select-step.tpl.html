@@ -34,10 +34,14 @@
             ng-model="project.submittedGrade"
             btn-radio="{{$index}}"
           >
+<<<<<<< HEAD
             <grade-icon
               grade="grade"
               class="text-{{project.submittedGrade == grades.indexOf(grade) ? 'success' : 'muted'}}"
             ></grade-icon>
+=======
+            <grade-icon [grade]="grade"></grade-icon>
+>>>>>>> origin/migrate/grade-task-modal
           </label>
         </div>
         <p class="help-block">

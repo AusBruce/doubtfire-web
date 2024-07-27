@@ -162,6 +162,7 @@ import {OverseerImageListComponent} from './admin/institution-settings/overseer-
 import {TaskAssessmentCommentComponent} from './tasks/task-comments-viewer/task-assessment-comment/task-assessment-comment.component';
 import {TaskAssessmentModalComponent} from './common/modals/task-assessment-modal/task-assessment-modal.component';
 
+<<<<<<< HEAD
 import {TaskSubmissionHistoryComponent} from './tasks/task-submission-history/task-submission-history.component';
 import {HomeComponent} from './home/states/home/home.component';
 import {IsActiveUnitRole} from './common/pipes/is-active-unit-role.pipe';
@@ -224,6 +225,27 @@ import {FTaskSheetViewComponent} from './units/states/tasks/viewer/directives/f-
 import {TasksViewerComponent} from './units/states/tasks/tasks-viewer/tasks-viewer.component';
 import {UnitCodeComponent} from './common/unit-code/unit-code.component';
 import {GradeService} from './common/services/grade.service';
+=======
+import { TaskSubmissionHistoryComponent } from './tasks/task-submission-history/task-submission-history.component';
+import { HomeComponent } from './home/states/home/home.component';
+import { IsActiveUnitRole } from './common/pipes/is-active-unit-role.pipe';
+import { HeaderComponent } from './common/header/header.component';
+import { UnitDropdownComponent } from './common/header/unit-dropdown/unit-dropdown.component';
+import { TaskDropdownComponent } from './common/header/task-dropdown/task-dropdown.component';
+import { SplashScreenComponent } from './home/splash-screen/splash-screen.component';
+import { GradeIconComponent } from './common/grade-icon/grade-icon.component';
+import { GradeTaskModalComponent } from './tasks/modals/grade-task-modal/grade-task-modal.component';
+import { HttpErrorInterceptor } from './common/services/http-error.interceptor';
+import { TaskDefinitionService } from './api/services/task-definition.service';
+import { TaskOutcomeAlignmentService } from './api/services/task-outcome-alignment.service';
+import { GroupService } from './api/services/group.service';
+import { ObjectSelectComponent } from './common/obect-select/object-select.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HeroSidebarComponent } from './common/hero-sidebar/hero-sidebar.component';
+import { SignInComponent } from './sessions/states/sign-in/sign-in.component';
+import { EditProfileComponent } from './common/edit-profile/edit-profile.component';
+import { TransitionHooksService } from './sessions/transition-hooks.service';
+>>>>>>> origin/migrate/grade-task-modal
 
 @NgModule({
   // Components we declare
@@ -293,6 +315,8 @@ import {GradeService} from './common/services/grade.service';
     UnitDropdownComponent,
     TaskDropdownComponent,
     SplashScreenComponent,
+    GradeIconComponent,
+    GradeTaskModalComponent,
     ObjectSelectComponent,
     WelcomeComponent,
     AcceptEulaComponent,
