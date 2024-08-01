@@ -43,7 +43,7 @@ import 'build/src/app/visualisations/achievement-custom-bar-chart.js';
 import 'build/src/app/visualisations/alignment-bar-chart.js';
 import 'build/src/app/visualisations/achievement-box-plot.js';
 import 'build/src/app/tasks/modals/upload-submission-modal/upload-submission-modal.js';
-import 'build/src/app/tasks/modals/grade-task-modal/grade-task-modal.js';
+// import 'build/src/app/tasks/modals/grade-task-modal/grade-task-modal.js';
 import 'build/src/app/tasks/modals/modals.js';
 import 'build/src/app/tasks/tasks.js';
 import 'build/src/app/tasks/project-tasks-list/project-tasks-list.js';
@@ -225,6 +225,8 @@ import {FUnitsComponent} from './admin/states/f-units/f-units.component';
 import {MarkedPipe} from './common/pipes/marked.pipe';
 import {AlertService} from './common/services/alert.service';
 import {GradeService} from './common/services/grade.service';
+import {GradeTaskModalComponent} from './tasks/modals/grade-task-modal/grade-task-modal.component';
+
 export const DoubtfireAngularJSModule = angular.module('doubtfire', [
   'doubtfire.config',
   'doubtfire.sessions',
@@ -461,6 +463,11 @@ DoubtfireAngularJSModule.directive(
 DoubtfireAngularJSModule.directive(
   'statusIcon',
   downgradeComponent({component: StatusIconComponent}),
+);
+
+DoubtfireAngularJSModule.directive(
+  'gradeTaskModal',
+  downgradeComponent({ component: GradeTaskModalComponent }),
 );
 DoubtfireAngularJSModule.directive('newFUnits', downgradeComponent({component: FUnitsComponent}));
 
