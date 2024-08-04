@@ -5,7 +5,7 @@ import { GradeService } from 'src/app/common/services/grade.service';
 @Component({
   selector: 'app-grade-task-modal',
   templateUrl: './grade-task-modal.component.html',
-  styleUrls: ['./grade-task-modal.component.css']
+  styleUrls: ['./grade-task-modal.component.scss']
 })
 export class GradeTaskModalComponent implements OnInit {
   task: any;

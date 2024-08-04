@@ -225,8 +225,8 @@ import {FUnitsComponent} from './admin/states/f-units/f-units.component';
 import {MarkedPipe} from './common/pipes/marked.pipe';
 import {AlertService} from './common/services/alert.service';
 import {GradeService} from './common/services/grade.service';
-import {GradeTaskModalComponent} from './tasks/modals/grade-task-modal/grade-task-modal.component';
 
+import {GradeTaskModalService} from './tasks/modals/grade-task-modal/grade-task-modal.service';
 export const DoubtfireAngularJSModule = angular.module('doubtfire', [
   'doubtfire.config',
   'doubtfire.sessions',
@@ -241,6 +241,7 @@ export const DoubtfireAngularJSModule = angular.module('doubtfire', [
 
 // Downgrade angular modules that we need...
 // factory -> service
+DoubtfireAngularJSModule.factory('GradeTaskModal', downgradeInjectable(GradeTaskModalService));
 DoubtfireAngularJSModule.factory('AboutDoubtfireModal', downgradeInjectable(AboutDoubtfireModal));
 DoubtfireAngularJSModule.factory(
   'TeachingPeriodUnitImportService',
@@ -465,10 +466,8 @@ DoubtfireAngularJSModule.directive(
   downgradeComponent({component: StatusIconComponent}),
 );
 
-DoubtfireAngularJSModule.directive(
-  'gradeTaskModal',
-  downgradeComponent({ component: GradeTaskModalComponent }),
-);
+
+
 DoubtfireAngularJSModule.directive('newFUnits', downgradeComponent({component: FUnitsComponent}));
 
 // Global configuration
