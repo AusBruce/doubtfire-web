@@ -8,6 +8,7 @@ import {TeachingPeriodListComponent} from './admin/states/teaching-periods/teach
 import {AcceptEulaComponent} from './eula/accept-eula/accept-eula.component';
 import {FUsersComponent} from './admin/states/f-users/f-users.component';
 import {FUnitsComponent} from './admin/states/f-units/f-units.component';
+import { UnauthorisedComponent } from './errors/states/unauthorised/unauthorised.component';
 
 /*
  * Use this file to store any states that are sourced by angular components.
@@ -291,6 +292,21 @@ const ViewAllUnits: NgHybridStateDeclaration = {
   },
 };
 
+
+const UnauthorisedState: NgHybridStateDeclaration = {
+  name: 'unauthorised',
+  url: '/unauthorised',
+  // passes 'mode' as @Input to the component
+  views: {
+    main: {
+      component: UnauthorisedComponent,
+    },
+  },
+  data: {
+    pageTitle: '_Unauthorised_',
+  },
+};
+
 /**
  * Export the list of states we have created in angular
  */
@@ -306,4 +322,5 @@ export const doubtfireStates = [
   ViewAllProjectsState,
   ViewAllUnits,
   AdministerUnits,
+  UnauthorisedState,
 ];
